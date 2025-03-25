@@ -127,30 +127,39 @@ contract MedicalRecord {
     function getRecordId() public view returns (uint) {
         return recordId;
     }
+
     function getTimestamp(uint _recordId) public view returns (uint256) {
         return records[_recordId].timestamp;
     }
+
     function getName(uint _recordId) public view returns (string memory) {
         return records[_recordId].name;
     }
+
     function getAge(uint _recordId) public view returns (uint) {
         return records[_recordId].age;
     }
+
     function getGender(uint _recordId) public view returns (string memory) {
         return records[_recordId].gender;
     }
+
     function getBloodType(uint _recordId) public view returns (string memory) {
         return records[_recordId].bloodType;
     }
+
     function getAllergies(uint _recordId) public view returns (string memory) {
         return records[_recordId].allergies;
     }
+
     function getDiagnosis(uint _recordId) public view returns (string memory) {
         return records[_recordId].diagnosis;
     }
+
     function getTreatment(uint _recordId) public view returns (string memory) {
         return records[_recordId].treatment;
     }
+
     function getDeleted(uint _recordId) public view returns (bool) {
         return isDeleted[_recordId];
     }
